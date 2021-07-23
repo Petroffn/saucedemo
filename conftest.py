@@ -1,8 +1,7 @@
 import allure
 import pytest
 from selenium import webdriver
-from pages.login_page1 import LoginPage
-
+from pages.login_page import LoginPage
 
 
 @pytest.fixture()
@@ -13,7 +12,6 @@ def driver(request):
         driver.implicitly_wait(5)
         request.addfinalizer(driver.quit)
         return driver
-
 
 
 @pytest.fixture()

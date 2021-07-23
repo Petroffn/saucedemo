@@ -1,13 +1,6 @@
 import allure
 
 
-class TestLogout:
-    @allure.title('Check that user can logout')
-    def test_user_can_logout(self, login, driver):
-        logout_page = LogoutPage(driver)
-        logout_page.move_to_menu()
-        logout_page.click_logout_button()
-
 class LogoutPage:
     def __init__(self, driver):
         self.driver = driver
@@ -23,7 +16,3 @@ class LogoutPage:
     @allure.step('Wait for Login button')
     def wait_for_login_button(self):
         self.driver.find_element_by_xpath('//input[@id="login-button"]').click()
-
-
-
-
