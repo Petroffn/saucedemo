@@ -26,3 +26,5 @@ def login(driver):
     login_page.input_password(password)
     login_page.click_login_button()
     login_page.wait_for_profile_page()
+
+
