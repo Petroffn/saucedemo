@@ -1,3 +1,5 @@
+import csv
+
 import allure
 import pytest
 from selenium import webdriver
@@ -18,8 +20,15 @@ def driver(request):
 def login(driver):
     login_page = LoginPage(driver)
 
-    username = 'standard_user'
-    password = 'secret_sauce'
+    accounts = []
+    with open('/Users/nikolaipetrov/Documents/Dev/saucedemo/TestData/standard_user_credential.csv', 'r') as csv_file:
+        reader = csv.reader(csv_file)
+        for line in reader:
+            accounts.append(line)
+            print(accounts)
+
+    username = (line[0])
+    password = (line[1])
 
     login_page.open_login_page()
     login_page.input_username(username)
