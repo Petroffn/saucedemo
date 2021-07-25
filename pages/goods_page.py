@@ -14,7 +14,7 @@ class GoodsPage:
         except NoSuchElementException:
             allure.attach(self.driver.get_screenshot_as_png(), 'Screen shot before quit',
                           attachment_type=allure.attachment_type.PNG)
-            raise AssertionError('PRODUCTS is not found')
+            raise AssertionError('Element is not found')
 
 
     @allure.step('Add backpack to cart')
@@ -28,7 +28,7 @@ class GoodsPage:
         except NoSuchElementException:
             allure.attach(self.driver.get_screenshot_as_png(), 'Screen shot before quit',
                           attachment_type=allure.attachment_type.PNG)
-            raise AssertionError('PRODUCTS is not found')
+            raise AssertionError('Element is not found')
 
     @allure.step('Cart displayed with 1')
     def check_cart_changed_to_one(self):
@@ -46,4 +46,4 @@ class GoodsPage:
         except NoSuchElementException:
             allure.attach(self.driver.get_screenshot_as_png(), 'Screen shot before quit',
                           attachment_type=allure.attachment_type.PNG)
-            raise AssertionError('PRODUCTS is not found')
+            raise AssertionError('Element is not found')

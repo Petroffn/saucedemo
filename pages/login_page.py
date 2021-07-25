@@ -29,4 +29,4 @@ class LoginPage:
         except NoSuchElementException:
             allure.attach(self.driver.get_screenshot_as_png(), 'Screen shot before quit',
                           attachment_type=allure.attachment_type.PNG)
-            raise AssertionError('PRODUCTS is not found')
+            raise AssertionError('Element is not found')
