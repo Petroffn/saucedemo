@@ -19,6 +19,7 @@ def driver(request):
 def login(driver):
     login_page = LoginPage(driver)
 
+
     accounts = []
     with open('TestData/standard_user_credential.csv', 'r') as csv_file:
         reader = csv.reader(csv_file)
