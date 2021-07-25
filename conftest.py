@@ -20,7 +20,7 @@ def login(driver):
     login_page = LoginPage(driver)
 
     accounts = []
-    with open('/Users/nikolaipetrov/Documents/Dev/saucedemo/TestData/standard_user_credential.csv', 'r') as csv_file:
+    with open('TestData/standard_user_credential.csv', 'r') as csv_file:
         reader = csv.reader(csv_file)
         for line in reader:
             accounts.append(line)
@@ -40,7 +40,7 @@ def login2(driver):
     login_page = LoginPage(driver)
 
     accounts = []
-    with open('/Users/nikolaipetrov/Documents/Dev/saucedemo/TestData/locked_out_user_credential.csv', 'r') as csv_file:
+    with open('TestData/locked_out_user_credential.csv', 'r') as csv_file:
         reader = csv.reader(csv_file)
         for line in reader:
             accounts.append(line)
