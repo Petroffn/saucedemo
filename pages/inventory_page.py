@@ -3,7 +3,7 @@ from selenium.common.exceptions import NoSuchElementException
 from selenium import webdriver
 
 
-class GoodsPage:
+class InventoryPage:
     def __init__(self, driver):
         self.driver = driver
 
