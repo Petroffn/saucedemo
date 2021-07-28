@@ -1,5 +1,6 @@
 import allure
 from selenium.common.exceptions import NoSuchElementException
+from locators.login_locators import LoginLocators
 
 
 class LoginPage:
@@ -12,15 +13,15 @@ class LoginPage:
 
     @allure.step('Input User Name')
     def input_username(self, username):
-        self.driver.find_element_by_id('user-name').send_keys(username)
+        self.driver.find_element(*LoginLocators.user_name_field).send_keys(username)
 
     @allure.step('Input Password')
     def input_password(self, password):
-        self.driver.find_element_by_id('password').send_keys(password)
+        self.driver.find_element(*LoginLocators.user_password_field).send_keys(password)
 
     @allure.step('Click on the Login button')
     def click_login_button(self):
-        self.driver.find_element_by_xpath('//input[@id="login-button"]').click()
+        self.driver.find_element(*LoginLocators.login_button).click()
 
     @allure.step('Wait for User name text')
     def wait_for_profile_page(self):
@@ -29,4 +30,4 @@ class LoginPage:
         except NoSuchElementException:
             allure.attach(self.driver.get_screenshot_as_png(), 'Screen shot before quit',
                           attachment_type=allure.attachment_type.PNG)
-            raise AssertionError('Element is not found')
+            raise AssertionError('Log Out button is not found')
