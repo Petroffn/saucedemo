@@ -21,7 +21,7 @@ class LoginPage:
 
     @allure.step('Click on the Login button')
     def click_login_button(self):
-        self.driver.find_element(*LoginLocators.login_button).click()
+        self.driver.find_element(*LoginLocators.button_login).click()
 
     @allure.step('Wait for User name text')
     def wait_for_profile_page(self):
