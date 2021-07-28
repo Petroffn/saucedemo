@@ -31,3 +31,4 @@ class LoginPage:
             allure.attach(self.driver.get_screenshot_as_png(), 'Screen shot before quit',
                           attachment_type=allure.attachment_type.PNG)
             raise AssertionError('Log Out button is not found')
+
