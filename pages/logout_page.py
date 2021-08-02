@@ -2,6 +2,7 @@ import allure
 from locators.logout_locators import LogoutLocators
 from locators.login_locators import LoginLocators
 
+
 class LogoutPage:
     def __init__(self, driver):
         self.driver = driver

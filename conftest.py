@@ -19,9 +19,8 @@ def driver(request):
 def login(driver):
     login_page = LoginPage(driver)
 
-
     accounts = []
-    with open('TestData/standard_user_credential.csv', 'r') as csv_file:
+    with open('../TestData/standard_user_credential.csv', 'r') as csv_file:
         reader = csv.reader(csv_file)
         for line in reader:
             accounts.append(line)
@@ -36,12 +35,13 @@ def login(driver):
     login_page.click_login_button()
     login_page.wait_for_profile_page()
 
+
 @pytest.fixture()
 def login2(driver):
     login_page = LoginPage(driver)
 
     accounts = []
-    with open('TestData/locked_out_user_credential.csv', 'r') as csv_file:
+    with open('../TestData/locked_out_user_credential.csv', 'r') as csv_file:
         reader = csv.reader(csv_file)
         for line in reader:
             accounts.append(line)
