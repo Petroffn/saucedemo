@@ -9,4 +9,4 @@
 
 ## Steps:
 1. Clone the repository;
-2. To run all tests please execute pytest --alluredir=allure-result, allure serve allure-result
+2. To run all tests please execute `pytest --alluredir=allure-result`, `allure serve allure-result`
